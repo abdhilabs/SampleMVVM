@@ -10,21 +10,20 @@ data class ResponseModel(
     var statusCode: Int,
 
     @Expose
-    @SerializedName("data")
+    @SerializedName("results")
     var data: MutableList<PlaceModel>
-
 ) {
     data class PlaceModel(
         @Expose
-        @SerializedName("name")
+        @SerializedName("title")
         var name: String,
 
         @Expose
-        @SerializedName("location")
+        @SerializedName("release_date")
         var location: String,
 
         @Expose
-        @SerializedName("image")
+        @SerializedName("poster_path")
         var image: String
     )
 }

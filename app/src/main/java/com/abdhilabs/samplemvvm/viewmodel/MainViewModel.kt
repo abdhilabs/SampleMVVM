@@ -6,6 +6,10 @@ import androidx.lifecycle.MutableLiveData
 import com.abdhilabs.samplemvvm.model.ResponseModel
 import com.abdhilabs.samplemvvm.network.MainRepository
 
+/**
+ * Buat ViewModelnya
+ */
+
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = MainRepository()

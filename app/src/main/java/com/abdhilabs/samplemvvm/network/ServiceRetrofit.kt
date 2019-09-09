@@ -6,6 +6,10 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * Buat Retrofitnya
+ */
+
 object ServiceRetrofit {
 
     fun create(): RestApi {
@@ -17,7 +21,7 @@ object ServiceRetrofit {
         val client = clientBuilder.build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://info-madiun.firebaseapp.com/")
+            .baseUrl("https://api.themoviedb.org/3/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(client)
